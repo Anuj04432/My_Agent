@@ -1,0 +1,8 @@
+langchain
+langchain-ollama
+langchain-groq
+langchain-gemini
+langchain-openrouter
+ipykernel
+tavily
+dotenv
