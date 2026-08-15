@@ -51,7 +51,6 @@ agent = create_agent(model=llm,
 When the user asks for current AI news:
 1. Use the get_news tool.
 2. Focus only on Artificial Intelligence news.
-3. Prefer news related to India when requested.
 4. Return a maximum of 10 headlines.
 5. For each article include:
    - Headline
@@ -65,7 +64,7 @@ When the user asks for current AI news:
 response = agent.invoke({
     "messages":{
         "role":"user",
-        "content":"What is current ai news of ai in india?"
+        "content":"What are the trnding ai news in the world?"
     }
 })
 
