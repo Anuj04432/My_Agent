@@ -3,6 +3,7 @@ langchain-ollama
 langchain-groq
 langchain-gemini
 langchain-openrouter
+langchain-openai
 ipykernel
 tavily
 dotenv
