@@ -21,10 +21,27 @@ def get_folder(folder_name:str):
 
 def get_directory(folder,file):
     for root,dirs,files in os.walk("C:\\"):
-        if folder in dirs:
-            path = os.path.basename(root) == folder
+        
+        if os.path.basename(root) == folder:
             if file in files:
                 return os.path.join(root,file)
     return "File not found"      
 
+def create_file(filename: str, content: str):
+    """Create a file and write the content"""
+    if os.path.exists(filename):
+          return f"{filename} file already exists"
+    with open(filename,"w", encoding='utf-8') as f:
+                f.write(content)
 
+    return f"{filename} file has created successfully"
+
+def delete_file():
+    file = input("Enter the file name: ")
+    if os.path.exists(file):
+        os.remove(file)
+        return f"{file} file deleted"
+    else:
+        return f"{file} file not exist"
+
+print(get_directory("tools", "git_tool.py"))
